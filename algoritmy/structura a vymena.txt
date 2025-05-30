@@ -1,0 +1,64 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+typedef struct{
+  int t_c;
+  int p_v;
+}zoznam;
+
+int main()
+{
+    int i, j, o, n, m, min, ind, hod, p;
+    printf("zadaj n: ");
+    scanf("%d", &n);
+    
+    zoznam a[n], pom;
+    
+    for(i=0; i<n; i++){
+        printf("zadaj cislo: ");
+        scanf("%d", &a[i].t_c);
+        printf("zadaj volania: ");
+        scanf("%d", &a[i].p_v);
+          
+        if(i==0){
+            min = a[i].p_v;
+            ind = i;
+        }
+        
+        if(a[i].p_v < min){
+            min = a[i].p_v;
+            ind = i;
+        }
+    }
+    
+    printf("\n");
+    
+    for (i=0; i<n; i++){
+        printf("%d:%d \n", a[i].t_c, a[i].p_v);
+    }
+    
+    pom.p_v= a[ind].p_v;
+    a[ind].p_v = a[n-1].p_v;
+    a[n-1].p_v = pom.p_v;
+        
+    pom.t_c= a[ind].t_c;
+    a[ind].t_c = a[n-1].t_c;
+    a[n-1].t_c = pom.t_c;
+    
+    printf("\n");
+    
+    for (i=0; i<n; i++){
+        printf("%d:%d \n", a[i].t_c, a[i].p_v);
+
+    }
+
+    
+    return 0;
+}

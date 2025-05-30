@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1621409745 source:c:\users\domca\desktop\cs\ls_skuska\main.c
+	"main.h"
+
+1621405322 c:\users\domca\desktop\cs\ls_skuska\main.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

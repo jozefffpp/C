@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int i, j, n, m, max, ind, hod, pom, p;
+    printf("zadaj m: ");
+    scanf("%d", &m);
+    printf("zadaj n: ");
+    scanf("%d", &n);
+    
+    float a[m][n], b[m][n];
+
+    for(i=0; i<m; i++){
+        for(j=0; j<n; j++){
+        printf("zadaj cisla matice: ");
+        scanf("%f", &a[i][j]);
+        }
+    }
+    for(i=0; i<m; i++){
+        for(j=0; j<n; j++){
+            b[i][j] = a[i][n-j-1];
+        }
+    }
+    
+    for(i=0; i<m; i++){
+        for(j=0; j<n; j++){
+            printf("%.2f ", a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("\n \n ");
+    
+    for(i=0; i<m; i++){
+        for(j=0; j<n; j++){
+            printf("%.2f ", b[i][j]);
+        }
+        printf("\n");
+    }
+    
+    
+    return 0;
+}
