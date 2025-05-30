@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1616419562 source:c:\users\joseph\desktop\umb\programovanie 1\programy\tyzden6\tyzden6\main.c
+	<stdio.h>
+	<stdlib.h>
+	"komplex.h"
+
+1616419555 c:\users\joseph\desktop\umb\programovanie 1\programy\tyzden6\tyzden6\komplex.h
+
+1616419619 source:c:\users\joseph\desktop\umb\programovanie 1\programy\tyzden6\tyzden6\komplex.c
+	"komplex.h"
+
+1616585503 source:c:\users\joseph\desktop\umb\programovanie 1\programy\6tyzden\tyzden6\komplex.c
+	"komplex.h"
+
+1616423155 c:\users\joseph\desktop\umb\programovanie 1\programy\6tyzden\tyzden6\komplex.h
+
+1616585708 source:c:\users\joseph\desktop\umb\programovanie 1\programy\6tyzden\tyzden6\main.c
+	<stdio.h>
+	<stdlib.h>
+	"komplex.h"
+

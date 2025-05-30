@@ -1,0 +1,1 @@
+Vstupny subor je potrebne ulozit do adresara projektu.

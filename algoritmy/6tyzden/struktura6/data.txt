@@ -1,0 +1,3 @@
+jozef,mrkva,20
+peter,petrus,3
+

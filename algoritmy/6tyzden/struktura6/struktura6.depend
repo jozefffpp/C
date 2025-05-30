@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1616589633 source:c:\users\joseph\desktop\umb\programovanie 1\programy\tyzden6\struktura6\main.c
+	<stdio.h>
+	<stdlib.h>
+	"main.h"
+	<stdio_ext.h>
+
+1616584270 c:\users\joseph\desktop\umb\programovanie 1\programy\tyzden6\struktura6\main.h
+
