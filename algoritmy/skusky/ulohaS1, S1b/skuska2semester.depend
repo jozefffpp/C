@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1621081434 source:c:\users\joseph\desktop\umb\programovanie 1\programy\skuska2semester\main.c
+	<stdio.h>
+	<stdlib.h>
+	"main.h"
+
+1620818107 c:\users\joseph\desktop\umb\programovanie 1\programy\skuska2semester\main.h
+
+1621105839 source:c:\users\joseph\desktop\umb\programovanie1\programy\skuska2semester\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1621085367 c:\users\joseph\desktop\umb\programovanie1\programy\skuska2semester\main.h
+
+1622460241 source:c:\users\joseph\desktop\umb\programovanie1\programy\skusky\ulohas1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1622460265 c:\users\joseph\desktop\umb\programovanie1\programy\skusky\ulohas1\main.h
+

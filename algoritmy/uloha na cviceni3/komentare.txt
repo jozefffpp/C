@@ -1,0 +1,11 @@
+/**********************
+tento program je ukazka
+programu v jazyku C
+**********************/
+                  
+//funkcia main zacina tu
+          
+ 
+                          
+            //koniec
+ 

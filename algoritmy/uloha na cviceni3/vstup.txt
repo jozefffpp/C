@@ -1,0 +1,11 @@
+/**********************
+tento program je ukazka
+programu v jazyku C
+**********************/
+#include <stdio.h>
+//funkcia main zacina tu
+int main()
+{
+ printf("Hello world!\n");
+ return(0); //koniec
+}

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1622982391 source:c:\users\joseph\desktop\umb\programovanie1\programy\skusky\ulohas3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1622895040 c:\users\joseph\desktop\umb\programovanie1\programy\skusky\ulohas3\main.h
+

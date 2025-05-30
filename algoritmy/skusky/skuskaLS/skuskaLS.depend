@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1622638915 source:c:\users\joseph\desktop\umb\programovanie1\programy\skuskals\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"main.h"
+
+1622638712 c:\users\joseph\desktop\umb\programovanie1\programy\skuskals\main.h
+
