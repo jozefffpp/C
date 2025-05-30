@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[] = {2,5,9,1,8,6,3,4,0,7};
+
+    //vypis pola
+    int x;
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+
+    //insertion sort
+    int pom;
+    int i,j;
+    for(i = 1; i < 10; i++){ //posun po neinvariantnej casti pola
+        pom = a[i];
+        j = i - 1;
+        while(j >= 0 && pom < a[j]){ //hladanie spravneho miesta pre hodnotu pom v invariantnej casti pola
+            a[j + 1] = a[j]; //posuvanie prvkov v zotriedenej casti pola
+            j--;
+        }
+        a[j+1] = pom; //zapisanie hodnoty na spravne miesto
+    }
+
+    //vypis pola
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+    return 0;
+}

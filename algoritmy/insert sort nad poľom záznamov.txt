@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    char m[20];
+    char p[20];
+    int v;
+}BYTOST;
+
+BYTOST pole[20];
+
+int main()
+{
+    strcpy(pole[0].m,"Janko"); strcpy(pole[0].p,"Hrasko"); pole[0].v = 15;
+    strcpy(pole[1].m,"Baba"); strcpy(pole[1].p,"Jaga"); pole[1].v = 100;
+    strcpy(pole[2].m,"Sipkova"); strcpy(pole[2].p,"Ruzenka"); pole[2].v = 118;
+    strcpy(pole[3].m,"Cudo"); strcpy(pole[3].p,"Judo"); pole[3].v = 520;
+    strcpy(pole[4].m,"Shrek"); strcpy(pole[4].p,"Shrek"); pole[4].v = 23;
+    strcpy(pole[5].m,"Frodo"); strcpy(pole[5].p,"Bublik"); pole[5].v = 55;
+    strcpy(pole[6].m,"Bilbo"); strcpy(pole[6].p,"Bublik"); pole[6].v = 111;
+    strcpy(pole[7].m,"Gandalf"); strcpy(pole[7].p,"White"); pole[7].v = 311;
+    strcpy(pole[8].m,"Frau"); strcpy(pole[8].p,"Hole"); pole[8].v = 888;
+    strcpy(pole[9].m,"Saruman"); strcpy(pole[9].p,"White"); pole[9].v = 221;
+
+
+    //vypis pola
+    int k;
+    for(k = 0; k < 10; k++){
+        printf("%s %s %d\n",pole[k].m,pole[k].p,pole[k].v);
+    }
+
+    BYTOST pom;
+
+    int i,j;
+    for(i = 1; i < 10; i++){ //posun po neinvariantnej casti pola
+        strcpy(pom.m,pole[i].m);strcpy(pom.p,pole[i].p); pom.v = pole[i].v;
+        j = i - 1;
+        while(j >= 0 && strcmp(pom.p,pole[j].p) < 0){ //hladanie spravneho miesta pre hodnotu pom v invariantnej casti pola
+            strcpy(pole[j + 1].m,pole[j].m);strcpy(pole[j + 1].p,pole[j].p); pole[j + 1].v = pole[j].v;
+            j--;
+        }
+        strcpy(pole[j + 1].m,pom.m);strcpy(pole[j + 1].p,pom.p); pole[j + 1].v = pom.v;
+    }
+
+
+
+
+
+    printf("---------------------------------\n");
+    for(k = 0; k < 10; k++){
+        printf("%s %s %d\n",pole[k].m,pole[k].p,pole[k].v);
+    }
+    return 0;
+}

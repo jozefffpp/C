@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float suma; //xxxxy.zv
+    printf("Suma = ");
+    scanf("%f",&suma);
+    float pom = suma;
+    int m2 = 0;
+    int m1 = 0;
+    int m05 = 0;
+    int m02 = 0;
+    int m01 = 0;
+    int m005 = 0;
+    int m002 = 0;
+    int m001 = 0;
+
+    while(suma >= 2){
+        suma = suma - 2;
+        m2++;
+    }
+    while(suma >= 1){
+        suma = suma - 1;
+        m1++;
+    }
+
+    printf("Suma %f sa da vyplatit nasledovne:\n", pom);
+    printf("2 eura - %d ks\n", m2);
+    printf("1 eura - %d ks\n", m1);
+    return 0;
+}

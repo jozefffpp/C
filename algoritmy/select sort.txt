@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[] = {2,5,9,1,8,6,3,4,0,7};
+
+    //vypis pola
+    int x;
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+
+    //select sort
+    int pom;
+    int imin;
+    int i,j;
+    for(i = 0; i < 9; i++){
+        imin = i;
+        for(j = i + 1; j < 10; j++){
+            if(a[j] < a[imin])
+                imin = j;
+        }
+        pom = a[i];
+        a[i] = a[imin];
+        a[imin] = pom;
+    }
+
+
+
+    //vypis pola
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+    return 0;
+}

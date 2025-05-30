@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX 24
+
+int main()
+{
+    //inicializacia pola
+    int a[MAX];
+    int _a = 0;
+    int i,j,x;
+    //inicializacia generovania pseudonahodnych cisel
+    srand((unsigned)time(NULL));
+    //vlozime postupne 10 nahodnych cisiel
+    for(i = 0; i < 10; i++){
+        //generovanie nahodneho cisl
+        x = rand() % 9;
+        printf("Vkladam hodnotu %d.\n",x);
+        j = _a;
+        while(j > 0 && x < a[j-1]){
+            a[j] = a[j-1];
+            j--;
+        }
+        a[j] = x;
+        _a++;
+        //vypis pola
+        for(j = 0; j < _a; j++)
+            printf("%d ",a[j]);
+        printf("\n");
+    }
+    return 0;
+
+}

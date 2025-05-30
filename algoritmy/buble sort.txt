@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[] = {2,5,9,1,8,6,3,4,0,7};
+
+    //vypis pola
+    int x;
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+
+    //bubble sort
+    /*int pom;
+    int i,j;
+    for(i = 1; i < 10; i++){
+        for(j = 9; j >= i; j--){
+            if(a[j] < a[j - 1]){
+                pom = a[j];
+                a[j] = a[j - 1];
+                a[j - 1] = pom;
+            }
+        }
+    }*/
+
+    //bubble sort inak
+    int pom;
+    int i,j;
+    for(i = 0; i < 9; i++){
+        for(j = 0; j < 10 - i - 1; j++){
+            if(a[j] > a[j + 1]){
+                pom = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = pom;
+            }
+        }
+    }
+
+    //vypis pola
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    long long int c;
+    int pocet = 0;
+    printf("testovane cislo = ");
+    scanf("%lld",&c);
+    long long int i, j;
+    for(j = 2; j <= c; j++){
+        i = 2;
+        while(j % i != 0 && i <= floor(sqrt(j))){
+            i = i + 1; //i++;
+        }
+        if(j % i == 0 && i <= floor(sqrt(j)))
+            printf("Cislo %lld nie je prvocislo.\n", j);
+        else{
+            printf("Cislo %lld je prvocislo.\n", j);
+            pocet++;
+        }
+    }
+    printf("Pocet prvocisel od 2 po %lld je %d.\n", c, pocet);
+    return 0;
+}

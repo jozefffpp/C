@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j;
+    printf("zadaj cele kladne cislo n: ");
+    scanf("%d", &n);
+
+    for(i=1; i<=n; i++){
+        for(j=1; j<=n; j++){
+            if(j%i == 0){
+            putchar('*');
+        }
+        else{
+            putchar(' ');
+        }
+            
+        }
+        putchar('\n');
+    }
+    return 0;
+}{\rtf1}

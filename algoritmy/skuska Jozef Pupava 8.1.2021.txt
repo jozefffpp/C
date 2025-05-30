@@ -1,0 +1,57 @@
+
+/*Vytvorte program, ktorý načíta informácie o n pracovníkoch v závode.
+Program bude zisťovať meno pracovníka a výšku mzdy pracovníkov.
+Následne vypočíta priemernú výšku mzdy pracovníkov a vypíše meno 
+pracovníka spolu s jeho výškou mzdy, ktorého výška mzdy je najbližšie k
+priemeru mzdy všetkých pracovníkov.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    
+    char meno[20];
+    int mzda;
+    
+}pracovnici;
+
+int main()
+{
+    int n, i, idzamestnanca;
+    float dokopy, priemer, odchilka;
+    
+    dokopy = 0;
+    priemer = 0;
+    odchilka = 0;
+    printf("Zadaj pocet pracovnikov: ");
+    scanf("%d", &n);
+    
+    pracovnici pole[n];
+    
+    for (i = 0; i < n; i++) {
+        printf("Zadaj meno pracovnika: ");
+        scanf("%s", pole[i].meno);
+        printf("Zadaj mzdu pracovnika: \n" );
+        scanf("%d", &pole[i].mzda);
+        dokopy = dokopy + pole[i].mzda;
+    }
+    priemer = dokopy / n;
+
+    for (i = 0; i < n; i++) {
+        
+        if(odchilka == 0){
+            odchilka = fabs(pole[i].mzda - priemer);
+        }
+        if(odchilka > fabs(pole[i].mzda - priemer)){
+            odchilka = fabs(pole[i].mzda - priemer);
+            idzamestnanca = i;
+        };
+      
+    }
+    
+    printf("Meno zamestnanca, ktory ma mzdu najblizsie k priemeru: %s \n", pole[idzamestnanca].meno);
+    printf("Jeho mzda: %d", pole[idzamestnanca].mzda);
+    
+    return 0;
+}

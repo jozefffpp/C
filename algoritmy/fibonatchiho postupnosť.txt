@@ -1,0 +1,25 @@
+//Fibonaccioho postupnost
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 15
+
+int main()
+{
+    //definovanie premennych
+    long long int fib[MAX];
+    int i;
+
+    //inicializacia prvych prvkov
+    fib[0] = 1;
+    fib[1] = 1;
+
+    //generovanie ostatnych clenov postupnosti
+    for(i = 2; i < MAX; i++)
+        fib[i] = fib[i-2] + fib[i-1];
+
+    //vypis celnov postupnosti
+    for(i = 0; i < MAX; i++)
+    printf("a[%d] = %lld\n", i, fib[i]);
+
+    return 0;
+}

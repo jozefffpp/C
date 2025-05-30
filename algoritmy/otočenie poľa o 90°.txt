@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 4
+int main()
+{
+    //inicializacia 2D pola
+    int a[MAX][MAX], b[MAX][MAX];;
+    int i,j,k = 1;
+    for(i = 0; i < MAX; i++)
+    for(j = 0; j < MAX; j++){
+        a[i][j] = k;
+        k++;
+    }
+    //vypis 2D pola
+     for(i = 0; i < MAX; i++){
+        for(j = 0; j < MAX; j++)
+            printf("%2d ", a[i][j]);
+        printf("\n");
+
+    }
+    printf("\n");
+    //otocenie o 90 stupnov v smere hodinovych ruciciek
+    for(i = 0; i < MAX; i++)
+        for(j = 0; j < MAX; j++)
+            b[i][j] = a[MAX-j-1][i];
+     //vypis 2D pola
+     for(i = 0; i < MAX; i++){
+        for(j = 0; j < MAX; j++)
+            printf("%2d ", b[i][j]);
+        printf("\n");
+
+    }
+
+    return 0;
+}

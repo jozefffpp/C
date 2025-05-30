@@ -1,0 +1,58 @@
+/*Vytvorte program, ktorý načíta informácie o n žiakoch v triede. 
+Program bude zisťovať meno a výšku žiakov.
+Následne vypočíta priemernú výšku 
+žiakov a vypíše meno žiaka spolu s jeho výškou, ktorého výška je najbližšie k 
+priemeru výšok všetkých žiakov.*/
+
+#include <stdio.h>
+#include <math.h>
+typedef struct{
+    char meno[20];
+    int vyska;
+}ziaci;
+
+
+int main()
+{
+    float priemernaV, rozdielV, minR;
+    int i, n, ind;
+    priemernaV = 0;
+    
+    printf("Joseph Pupava \n");
+    printf("zadaj pocet ziakov: ");
+    scanf("%d", &n);
+    
+    ziaci student[n];
+    
+    for (i = 0; i < n; i++) {
+        printf("meno ziaka: ");
+        scanf("%s", student[i].meno);
+        
+        printf("vyska ziaka: ");
+        scanf("%d", &student[i].vyska);
+        priemernaV = priemernaV + student[i].vyska;
+    }
+    priemernaV = (priemernaV/n);
+    
+    printf("%f", priemernaV);
+    
+    for (i = 0; i < n; i++) {
+        rozdielV = fabs(student[i].vyska - priemernaV);
+        
+        if(i==0){
+            minR = rozdielV; 
+            ind = i;
+        }
+        
+        if(rozdielV < minR){
+            minR = rozdielV; 
+            ind = i;
+        }
+    }
+    
+    printf("meno najbliezsieho: %s, jeho vyska: %d", student[ind].meno, student[ind].vyska );
+    
+     
+
+    return 0;
+}

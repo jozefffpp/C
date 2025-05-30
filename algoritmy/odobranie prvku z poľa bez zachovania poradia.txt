@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 20
+
+int main()
+{
+    //inicializacia pola
+    int a[MAX] = {1,2,3,4,5,6,7};
+    int _a = 7;
+    int i, x;
+    //vypis pola
+    printf("Cele pole:\n");
+    for(i = 0; i < MAX; i++)
+        printf("%d ", a[i]);
+    printf("\nPole s relevantnymi udajmi:\n");
+    for(i = 0; i < _a; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    //odoberanie z lubovolneho miesta pola
+    if(_a > 0){
+        scanf("%d",&x);
+        if(x <= _a){
+            _a--;
+            a[x] = a[_a];
+        }
+      }
+
+    //vypis - v poli sa nic nezmeni, len pre nas relevantna cast sa skratila
+    printf("Cele pole po odobrati prvku:\n");
+    for(i = 0; i < MAX; i++)
+        printf("%d ", a[i]);
+    printf("\nPole s relevantnymi udajmi po odobrati prvku:\n");
+    for(i = 0; i < _a; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    //odoberanie z
+
+    return 0;
+}

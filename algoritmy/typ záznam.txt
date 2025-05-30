@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+Meno, Priezvisko, Mesto, vyska, hmotnost
+*/
+
+typedef struct adresa{
+    char mesto[30];
+    char ulica[50];
+    int pc;
+    int cd;
+    int psc;
+}ADRESA;
+
+typedef struct clovek{
+    char meno[20];
+    char priezvisko [25];
+    int vyska;
+    struct adresa adr;
+    //float plat;
+}CLOVEK;
+
+int main()
+{
+    //struct clovek a;
+    CLOVEK a;
+    printf("%d+%d+%d+%d = %d\n",sizeof(a.meno),sizeof(a.priezvisko),sizeof(a.vyska),sizeof(a));
+    strcpy(a.meno,"Xenia");
+    strcpy(a.priezvisko,"Cimprcaprlikova");
+    a.vyska = 150;
+    strcpy(a.adr.mesto,"Banska Bystrica");
+    strcpy(a.adr.ulica,"Tajovskeho");
+    a.adr.pc = 1041;
+    a.adr.cd = 40;
+    a.adr.psc = 97401;
+    printf("meno = %s\n",a.meno);
+    printf("mesto = %s\n",a.adr.mesto);
+
+
+    CLOVEK l[6000];
+    strcpy(l[0].meno,"Janko");
+    strcpy(l[0].priezvisko,"Hrasko");
+
+    scanf("%s",l[100].meno);
+    scanf("%d",&l[100].vyska);
+
+
+    printf("%s\n",l[100].meno);
+    printf("%d\n",l[100].vyska);
+    return 0;
+}

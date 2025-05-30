@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX 9
+int main()
+{
+    //inicializacia poli
+    int a[MAX], b[MAX];
+    int _a = MAX, _b = 0;
+    int i;
+    for(i = 0; i < MAX; i++)
+        a[i] = i+1;
+    //vypis pola, z ktoreho sa tvori permutacia
+    for(i = 0; i < MAX; i++)
+        printf("%d ",a[i]);
+    printf("\n");
+    //generovanie nahodneho vyberu
+    srand((unsigned)time(0));
+    while(_a > 0){
+        i = rand() % _a;
+        b[_b] = a[i];
+        _b++;
+        _a--;
+        a[i] = a[_a];
+    }
+    //vypis permutacie
+    for(i = 0; i < _b; i++)
+        printf("%d ", b[i]);
+    return 0;
+}

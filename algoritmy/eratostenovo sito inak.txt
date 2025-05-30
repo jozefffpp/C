@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+int main()
+{
+    int cisla[MAX];
+    int i,j;
+    //inicializacia pola
+    cisla[0] = 0;
+    cisla[1] = 0;
+    for(i = 2; i < MAX; i++)
+        cisla[i] = 1;
+    //vyskrtavanie
+    for(i = 2; i < ceil(sqrt(MAX)); i++){
+        if(cisla[i] == 1){
+            for(j = i + i; j < MAX; j = j + i)
+                cisla[j] = 0;
+        }
+    }
+    //vypis prvocisiel
+    for(i = 0; i < MAX; i++)
+        if(cisla
+           [i] == 1)
+            printf("%d\n",i);
+    return 0;
+}

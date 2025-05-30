@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[] = {2,5,9,1,8,6,3,4,0,7};
+
+    //vypis pola
+    int x;
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+
+    //shell sort
+    int pom;
+    int i,j;
+    int krok = 10 / 2; //krok
+    while(krok > 0){
+        for(i = 0; i < 10; i++){
+            j = i - krok;
+            pom = a[i];
+            while(j >= 0 && pom < a[j]){
+                a[j + krok] = a[j];
+                j = j - krok;
+            }
+            a[j + krok] = pom;
+        }
+        krok = krok / 2;
+    }
+
+    //vypis pola
+    for(x = 0; x < 10; x++)
+        printf("%d ", a[x]);
+    putchar('\n');
+    return 0;
+}
